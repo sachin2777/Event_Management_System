@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Create Event</h2>
+            <form id="createEventForm">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <textarea id="eventDescription" placeholder="Event Description" required></textarea>
+                <input type="text" id="eventLocation" placeholder="Event Location" required>
+                <input type="datetime-local" id="eventDate" required>
+                <button type="submit">Create Event</button>
+            </form>
+            <div id="eventErrorMessages"></div>
+        </div>
+
+        <div class="event-list">
+            <h2>Event List</h2>
+            <ul id="eventsList"></ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Add Attendee</h2>
+            <form id="createAttendeeForm">
+                <input type="text" id="attendeeName" placeholder="Attendee Name" required>
+                <input type="text" id="attendeeGender" placeholder="Attendee Gender" required>
+                <select id="eventSelector" required>
+                    <option value="">Select Event</option>
+                </select>
+                <button type="submit">Add Attendee</button>
+            </form>
+            <div id="attendeeErrorMessages"></div>
+        </div>
+
+        <div class="form-container">
+            <h2>Assign Task</h2>
+            <form id="createTaskForm">
+                <input type="text" id="taskName" placeholder="Task Name" required>
+                <select id="attendeeSelectorTask" required>
+                    <option value="">Select Attendee</option>
+                </select>
+                <input type="date" id="taskDeadline" required>
+                <button type="submit">Assign Task</button>
+            </form>
+            <div id="taskErrorMessages"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
